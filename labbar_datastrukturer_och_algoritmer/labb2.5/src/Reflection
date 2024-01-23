@@ -1,0 +1,12 @@
+Reflektion:
+Skriv en kort reflektion över de förändringar du har gjort.
+
+Vilken version är bättre?
+Insert som sorterar elementen med hjälp av "swim" vid call.
+
+Varför?
+Du behöver endast kolla den branchen och inte hela trädet. Endast elemtet behöver röra sig till sin plats, hela heapen
+måste inte gås igenom.
+
+Finns det fall då den “sämre” implementationen är bättre än den du valde ut?
+När man "skapar" hela heapen direkt och sen vill heapify:a den (tack magnus).

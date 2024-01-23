@@ -1,0 +1,25 @@
+1.
+    Programmet tar in antingen start och slutord eller endast slutord och hittar längsta effektivaste (kortaste)
+    kedjan mellan start och slutord (i fall av endast slutord hittar den längsta kedjan från x startord till input).
+    Detta sker genom BFS (breddenförstsökning). Detta är bättre än djupetförstsökning eftersom man ska hitta kortaste
+    kedjan, när man väl hittar den behöver man inte söka djupare på andra delar av trädet.
+    För att hitta längsta kortaste kedjan markerar programmet ordet den besökt med 'used' för att förhindra att
+    den återbesöker samma ord flera gånger.
+    Ordkedjan sparas sedan i den rekursiva listan 'WordRec'. I vårt fall finns den inom tmpWR.
+
+2.
+    Contains checkar ifall ett element finns med i en lista genom att iterera över elementen i listan. Därför har
+    funktionen för en lista med n objekt i en tidskomplexitet av O(n). I detta program används funktionen för att
+    checka ifall orden som skapas i makeChildren finns med i ordlistan, om de inte finns med ska de inte användas.
+    En bättre struktur än vector att använda när det kommer till uppslagning är tex en hashtabell med en
+    konstant upplsagningstid.
+
+3.
+    Varje anrop av 'makeChildren' går igenom hela ordet från input och skapar en ny string där en bokstav är utbytt
+    på varje plats i ordet. Ett alternativt sätt att representera ord i programmet för att kunna modifiera dem direkt
+    skulle vara att lagra ord som listor av tecken (char).
+
+4.
+    Programmet som givet ('checkAllStartWords', old version) går igenom alla ord från 'WordList' och jämför deras
+    kedjelängd för att hitta den längsta. New version (vårt program) hittar den längsta kedjan på endast en BFS
+    genom att börja från endword och göra allt omvänt.
